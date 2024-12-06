@@ -16,11 +16,13 @@
 		D55F3B232D032EE50026EF79 /* iBlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B222D032EE50026EF79 /* iBlinkTests.swift */; };
 		D55F3B2D2D032EE50026EF79 /* iBlinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B2C2D032EE50026EF79 /* iBlinkUITests.swift */; };
 		D55F3B2F2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B2E2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift */; };
-		D55F3B462D0330CE0026EF79 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B452D0330CE0026EF79 /* TaskViewModel.swift */; };
+		D55F3B462D0330CE0026EF79 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B452D0330CE0026EF79 /* TaskListViewModel.swift */; };
 		D55F3B482D0330E80026EF79 /* TaskWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B472D0330E80026EF79 /* TaskWidget.swift */; };
 		D55F3B4B2D0331000026EF79 /* LocalizableEN.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55F3B492D0331000026EF79 /* LocalizableEN.strings */; };
 		D55F3B4E2D0331660026EF79 /* LocalizableSP.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55F3B4C2D0331660026EF79 /* LocalizableSP.strings */; };
 		D55F3B512D0331710026EF79 /* LocalizableCA.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55F3B4F2D0331710026EF79 /* LocalizableCA.strings */; };
+		D55F3B5A2D035D190026EF79 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B592D035D190026EF79 /* TaskRepository.swift */; };
+		D55F3B5C2D035F130026EF79 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B5B2D035F130026EF79 /* TaskListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +55,13 @@
 		D55F3B282D032EE50026EF79 /* iBlinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBlinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55F3B2C2D032EE50026EF79 /* iBlinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBlinkUITests.swift; sourceTree = "<group>"; };
 		D55F3B2E2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBlinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D55F3B452D0330CE0026EF79 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		D55F3B452D0330CE0026EF79 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		D55F3B472D0330E80026EF79 /* TaskWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskWidget.swift; sourceTree = "<group>"; };
 		D55F3B4A2D0331000026EF79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableEN.strings; sourceTree = "<group>"; };
 		D55F3B522D03317D0026EF79 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/LocalizableCA.strings; sourceTree = "<group>"; };
 		D55F3B532D03318B0026EF79 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableSP.strings; sourceTree = "<group>"; };
+		D55F3B592D035D190026EF79 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		D55F3B5B2D035F130026EF79 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D55F3B0E2D032EE00026EF79 /* ContentView.swift */,
+				D55F3B5B2D035F130026EF79 /* TaskListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,7 +170,7 @@
 		D55F3B3E2D0330480026EF79 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D55F3B452D0330CE0026EF79 /* TaskViewModel.swift */,
+				D55F3B452D0330CE0026EF79 /* TaskListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				D55F3B152D032EE40026EF79 /* Persistence.swift */,
+				D55F3B592D035D190026EF79 /* TaskRepository.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -331,11 +337,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55F3B192D032EE40026EF79 /* iBlink.xcdatamodeld in Sources */,
-				D55F3B462D0330CE0026EF79 /* TaskViewModel.swift in Sources */,
+				D55F3B462D0330CE0026EF79 /* TaskListViewModel.swift in Sources */,
 				D55F3B482D0330E80026EF79 /* TaskWidget.swift in Sources */,
 				D55F3B162D032EE40026EF79 /* Persistence.swift in Sources */,
 				D55F3B0F2D032EE00026EF79 /* ContentView.swift in Sources */,
 				D55F3B0D2D032EE00026EF79 /* iBlinkApp.swift in Sources */,
+				D55F3B5A2D035D190026EF79 /* TaskRepository.swift in Sources */,
+				D55F3B5C2D035F130026EF79 /* TaskListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

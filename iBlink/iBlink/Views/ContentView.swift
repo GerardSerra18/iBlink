@@ -9,12 +9,17 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
+    @State private var tasks: [TaskEntity] = []
+    @State private var newTaskText: String = ""
+    
     @Environment(\.managedObjectContext) private var viewContext
 
+    //Fetching the task from CoreData
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \TaskEntity.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<TaskEntity>
 
     var body: some View {
         NavigationView {
@@ -44,7 +49,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
+            let newItem = TaskEntity(context: viewContext)
             newItem.timestamp = Date()
 
             do {
