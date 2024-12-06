@@ -16,6 +16,13 @@
 		D55F3B232D032EE50026EF79 /* iBlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B222D032EE50026EF79 /* iBlinkTests.swift */; };
 		D55F3B2D2D032EE50026EF79 /* iBlinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B2C2D032EE50026EF79 /* iBlinkUITests.swift */; };
 		D55F3B2F2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B2E2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift */; };
+		D55F3B422D03307C0026EF79 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B412D03307C0026EF79 /* PersistenceController.swift */; };
+		D55F3B442D0330B20026EF79 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B432D0330B20026EF79 /* TaskEntity.swift */; };
+		D55F3B462D0330CE0026EF79 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B452D0330CE0026EF79 /* TaskViewModel.swift */; };
+		D55F3B482D0330E80026EF79 /* TaskWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F3B472D0330E80026EF79 /* TaskWidget.swift */; };
+		D55F3B4B2D0331000026EF79 /* LocalizableEN.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55F3B492D0331000026EF79 /* LocalizableEN.strings */; };
+		D55F3B4E2D0331660026EF79 /* LocalizableSP.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55F3B4C2D0331660026EF79 /* LocalizableSP.strings */; };
+		D55F3B512D0331710026EF79 /* LocalizableCA.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55F3B4F2D0331710026EF79 /* LocalizableCA.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		D55F3B282D032EE50026EF79 /* iBlinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBlinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55F3B2C2D032EE50026EF79 /* iBlinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBlinkUITests.swift; sourceTree = "<group>"; };
 		D55F3B2E2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBlinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D55F3B412D03307C0026EF79 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		D55F3B432D0330B20026EF79 /* TaskEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
+		D55F3B452D0330CE0026EF79 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		D55F3B472D0330E80026EF79 /* TaskWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskWidget.swift; sourceTree = "<group>"; };
+		D55F3B4A2D0331000026EF79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableEN.strings; sourceTree = "<group>"; };
+		D55F3B522D03317D0026EF79 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/LocalizableCA.strings; sourceTree = "<group>"; };
+		D55F3B532D03318B0026EF79 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableSP.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +112,12 @@
 		D55F3B0B2D032EE00026EF79 /* iBlink */ = {
 			isa = PBXGroup;
 			children = (
-				D55F3B0C2D032EE00026EF79 /* iBlinkApp.swift */,
-				D55F3B0E2D032EE00026EF79 /* ContentView.swift */,
+				D55F3B402D03305B0026EF79 /* Resources */,
+				D55F3B3F2D0330540026EF79 /* Widgets */,
+				D55F3B3E2D0330480026EF79 /* ViewModels */,
+				D55F3B3D2D0330410026EF79 /* Views */,
+				D55F3B3C2D03302B0026EF79 /* Models */,
+				D55F3B3B2D03301B0026EF79 /* App */,
 				D55F3B102D032EE40026EF79 /* Assets.xcassets */,
 				D55F3B152D032EE40026EF79 /* Persistence.swift */,
 				D55F3B172D032EE40026EF79 /* iBlink.xcdatamodeld */,
@@ -131,6 +149,57 @@
 				D55F3B2E2D032EE50026EF79 /* iBlinkUITestsLaunchTests.swift */,
 			);
 			path = iBlinkUITests;
+			sourceTree = "<group>";
+		};
+		D55F3B3B2D03301B0026EF79 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D55F3B0C2D032EE00026EF79 /* iBlinkApp.swift */,
+				D55F3B412D03307C0026EF79 /* PersistenceController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D55F3B3C2D03302B0026EF79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D55F3B432D0330B20026EF79 /* TaskEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D55F3B3D2D0330410026EF79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D55F3B0E2D032EE00026EF79 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D55F3B3E2D0330480026EF79 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D55F3B452D0330CE0026EF79 /* TaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D55F3B3F2D0330540026EF79 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D55F3B472D0330E80026EF79 /* TaskWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		D55F3B402D03305B0026EF79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D55F3B492D0331000026EF79 /* LocalizableEN.strings */,
+				D55F3B4C2D0331660026EF79 /* LocalizableSP.strings */,
+				D55F3B4F2D0331710026EF79 /* LocalizableCA.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +287,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ca,
+				es,
 			);
 			mainGroup = D55F3B002D032EE00026EF79;
 			productRefGroup = D55F3B0A2D032EE00026EF79 /* Products */;
@@ -238,6 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55F3B142D032EE40026EF79 /* Preview Assets.xcassets in Resources */,
+				D55F3B4B2D0331000026EF79 /* LocalizableEN.strings in Resources */,
+				D55F3B4E2D0331660026EF79 /* LocalizableSP.strings in Resources */,
+				D55F3B512D0331710026EF79 /* LocalizableCA.strings in Resources */,
 				D55F3B112D032EE40026EF79 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,9 +337,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55F3B192D032EE40026EF79 /* iBlink.xcdatamodeld in Sources */,
+				D55F3B462D0330CE0026EF79 /* TaskViewModel.swift in Sources */,
+				D55F3B482D0330E80026EF79 /* TaskWidget.swift in Sources */,
 				D55F3B162D032EE40026EF79 /* Persistence.swift in Sources */,
 				D55F3B0F2D032EE00026EF79 /* ContentView.swift in Sources */,
+				D55F3B442D0330B20026EF79 /* TaskEntity.swift in Sources */,
 				D55F3B0D2D032EE00026EF79 /* iBlinkApp.swift in Sources */,
+				D55F3B422D03307C0026EF79 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,12 +379,40 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D55F3B492D0331000026EF79 /* LocalizableEN.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55F3B4A2D0331000026EF79 /* en */,
+			);
+			name = LocalizableEN.strings;
+			sourceTree = "<group>";
+		};
+		D55F3B4C2D0331660026EF79 /* LocalizableSP.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55F3B532D03318B0026EF79 /* es */,
+			);
+			name = LocalizableSP.strings;
+			sourceTree = "<group>";
+		};
+		D55F3B4F2D0331710026EF79 /* LocalizableCA.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55F3B522D03317D0026EF79 /* ca */,
+			);
+			name = LocalizableCA.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		D55F3B302D032EE50026EF79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -371,6 +476,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
